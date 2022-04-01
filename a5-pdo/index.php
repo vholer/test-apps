@@ -8,8 +8,8 @@
   try {
     $conn = new PDO("mysql:host=$host;dbname=$db", $user, $pswd);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    printf("Connected to server version: %d\n", $conn->server_version);
-    $conn->close();
+    printf("Connected to server version: %s\n", $conn->getAttribute(PDO::ATTR_SERVER_VERSION));
+    $conn = null;
   } catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
   }
