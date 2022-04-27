@@ -1,0 +1,4 @@
+---
+# NOTE: YAML parsing is not implemented!
+pre:  echo "<html><body>pre:  Generated from deployment file on $(date)</body></html>" >/srv/app/index.html
+post: echo "<html><body>post: Generated from deployment file on $(date)</body></html>" >/srv/app/index.html
